@@ -1,22 +1,35 @@
 package domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Loan {
 
     private Integer id;
 
-    private Date loanDate;
+    private LocalDate loanDate;
 
-    private Date returnDate;
+    private LocalDate dueDate;
 
-    //
+    private LocalDate returnDate;
+
+    private LoanStatus status;
+
     private Member member;
 
-    private Set<Book> books =  new HashSet<>();
+    private List<Book> books = new ArrayList<>();
+
+    public enum LoanStatus {
+        ACTIVE,
+        RETURNED,
+        OVERDUE
+    }
 }

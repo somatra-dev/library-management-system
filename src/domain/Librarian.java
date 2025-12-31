@@ -1,19 +1,25 @@
 package domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Librarian {
 
     private Integer id;
 
-    private String LibrarianName;
+    private String name;
 
+    private String email;
 
-    //
-    private Set<Book> books = new HashSet<>();
+    private String phoneNumber;
+
+    private List<Book> managedBooks = new ArrayList<>();
 
 }

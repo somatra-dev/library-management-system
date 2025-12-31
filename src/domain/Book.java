@@ -1,9 +1,14 @@
 package domain;
 
-
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
 
     private Integer id;
@@ -12,12 +17,16 @@ public class Book {
 
     private String author;
 
-    private Data publicationDate;
+    private LocalDate publicationDate;
 
     private String category;
 
     private Integer totalPages;
 
     private Integer totalCopies;
+
+    private Integer availableCopies;
+
+    private Boolean isAvailable;
 
 }
