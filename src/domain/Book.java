@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Book {
 
-    private Integer id;
+    private String id;
 
     private String title;
 
@@ -21,11 +21,11 @@ public class Book {
 
     private String category;
 
-    private Integer totalPages;
+    private int totalPages;
 
-    private Integer totalCopies;
+    private int totalCopies;
 
-    private Integer availableCopies;
+    private int availableCopies;
 
     private Boolean isAvailable;
 
