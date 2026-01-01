@@ -12,25 +12,14 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Member {
-
     private Integer id;
-
     private String name;
-
     private String email;
-
     private String password;
-
     private String phoneNumber;
-
     private String address;
-
     private LocalDate membershipDate;
-
     private Boolean isActive;
-
     private Boolean isMember;
-
     private List<Loan> loans = new ArrayList<>();
-
 }

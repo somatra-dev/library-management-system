@@ -12,21 +12,12 @@ import java.time.LocalDate;
 public class Book {
 
     private Integer id;
-
     private String title;
-
     private String author;
-
     private LocalDate publicationDate;
-
     private String category;
-
     private Integer totalPages;
-
     private Integer totalCopies;
-
     private Integer availableCopies;
-
     private Boolean isAvailable;
-
 }

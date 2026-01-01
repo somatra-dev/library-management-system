@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface MemberService {
 
-    // ===================== Authentication =====================
     Member login(String email, String password);
 
     void logout(Integer memberId);

@@ -11,19 +11,11 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Librarian {
-
     private Integer id;
-
     private String name;
-
     private String email;
-
     private String password;
-
     private String phoneNumber;
-
     private Boolean isLibrarian;
-
     private List<Book> managedBooks = new ArrayList<>();
-
 }

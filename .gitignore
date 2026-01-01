@@ -3,3 +3,4 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
+OOA_OOD_Documentation.md

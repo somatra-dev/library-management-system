@@ -27,7 +27,7 @@ public class LibrarianServiceImpl implements LibrarianService {
         this.loanService = loanService;
     }
 
-    // ===================== Authentication =====================
+    // Authentication
     @Override
     public Librarian login(String email, String password) {
         return librarians.stream()
@@ -41,7 +41,7 @@ public class LibrarianServiceImpl implements LibrarianService {
         System.out.println("Librarian with ID " + librarianId + " has logged out.");
     }
 
-    // ===================== Librarian =====================
+    // Librarian
     @Override
     public void addLibrarian(Librarian librarian) {
         librarian.setId(nextId++);
@@ -57,7 +57,7 @@ public class LibrarianServiceImpl implements LibrarianService {
                 .orElse(null);
     }
 
-    // ===================== Book Management =====================
+    // Book
     @Override
     public void addBook(Book book) {
         bookService.addBook(book);
@@ -78,7 +78,7 @@ public class LibrarianServiceImpl implements LibrarianService {
         return bookService.findAllBooks();
     }
 
-    // ===================== Member Management =====================
+    // Member
     @Override
     public void addMember(Member member) {
         memberService.addMember(member);
@@ -89,7 +89,7 @@ public class LibrarianServiceImpl implements LibrarianService {
         return memberService.findAllMembers();
     }
 
-    // ===================== Loan Management =====================
+    // Loan
     @Override
     public List<Loan> viewAllLoans() {
         return loanService.findAllLoans();
