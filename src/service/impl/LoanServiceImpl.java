@@ -1,11 +1,12 @@
 package service.impl;
 
 import domain.Loan;
+import service.LoanService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoanServiceImpl{
+public class LoanServiceImpl {
 
     private final List<Loan> loans = new ArrayList<>();
     private Integer nextId = 1;
