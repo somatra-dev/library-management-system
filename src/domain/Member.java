@@ -19,6 +19,8 @@ public class Member {
 
     private String email;
 
+    private String password;
+
     private String phoneNumber;
 
     private String address;
@@ -26,6 +28,8 @@ public class Member {
     private LocalDate membershipDate;
 
     private Boolean isActive;
+
+    private Boolean isMember;
 
     private List<Loan> loans = new ArrayList<>();
 

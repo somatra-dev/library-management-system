@@ -1,10 +1,17 @@
 package service;
 
+import domain.Book;
+import domain.Loan;
 import domain.Member;
 
 import java.util.List;
 
 public interface MemberService {
+
+    // ===================== Authentication =====================
+    Member login(String email, String password);
+
+    void logout(Integer memberId);
 
     void addMember(Member member);
 
@@ -14,10 +21,18 @@ public interface MemberService {
 
     Member findMemberById(Integer id);
 
-    Member findMemberByEmail(String email);
-
     List<Member> findAllMembers();
 
     List<Member> searchMembersByName(String name);
+
+    List<Book> viewAvailableBooks(Integer memberId);
+
+    Loan borrowBook(Integer memberId, List<Book> books);
+
+    void returnBook(Integer memberId, Integer loanId);
+
+    List<Loan> viewOwnLoans(Integer memberId);
+
+    void updateOwnProfile(Integer memberId, Member updatedInfo);
 
 }
