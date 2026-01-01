@@ -8,13 +8,13 @@ public interface BookService {
 
     void addBook(Book book);
 
-    void updateBook(Integer id, Book book);
+    void updateBook(Book updatedBook);
 
-    void deleteBook(Integer id);
+    boolean deleteBook(String id);
 
-    Book findBookById(Integer id);
+    Book findBookById(String id);
 
-    List<Book> findAllBooks();
+    List<Book> listAllBooks();
 
     List<Book> searchBooksByTitle(String title);
 
